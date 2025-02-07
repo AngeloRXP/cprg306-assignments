@@ -11,7 +11,10 @@ export default function Page() {
         <li className="mb-4">
           <Link href="/week-3" className="text-blue-500 hover:text-blue-600">Week 3</Link>
         </li>
-      </ul>
+        <li className="hover:text-blue-500">
+            <Link href="/week-4" className="text-blue-500 hover:text-blue-600">Week 4</Link>
+          </li>
+        </ul>      
     </main>
   )
 }

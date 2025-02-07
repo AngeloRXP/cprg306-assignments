@@ -23,3 +23,15 @@ li {
   padding: 6px 5px;
   width: 20%;
 }
+
+
+.quantity-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: rgb(59, 130, 246);
+}
+
+.quantity-button:disabled {
+  background-color: rgb(107, 114, 128);
+  cursor: not-allowed;
+}
