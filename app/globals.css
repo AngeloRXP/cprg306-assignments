@@ -24,14 +24,78 @@ li {
   width: 20%;
 }
 
+.item-input {
+  width: 68%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+}
+
+.controls-row {
+  display: flex;
+  gap: 65px; 
+  margin-bottom: 10px;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px;
+}
 
 .quantity-button {
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  background-color: rgb(59, 130, 246);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
 
-.quantity-button:disabled {
-  background-color: rgb(107, 114, 128);
-  cursor: not-allowed;
+.quantity-button.minus {
+  background-color: #e2e8f0;
+  color: black;
 }
+
+.quantity-button.plus {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.quantity-display {
+  margin: 0 10px;
+  color: black;
+}
+
+.category-select {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+}
+
+.submit-button {
+  width: 72%;
+  padding: 8px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.container-center {
+  display: flex;          
+  justify-content: center; 
+  padding-top: 20px;      
+}
+
+.form-container {
+  width: 400px;           
+ }
