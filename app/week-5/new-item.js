@@ -42,7 +42,8 @@ export default function NewItem() {
               <button
                 type="button"
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                className="quantity-button minus"
+                disabled={quantity <= 1}
+                className="quantity-button minus rounded-r bg-blue-500 text-white hover:bg-blue-400"
               >
                 -
               </button>
@@ -50,7 +51,8 @@ export default function NewItem() {
               <button
                 type="button"
                 onClick={() => setQuantity(Math.min(20, quantity + 1))}
-                className="quantity-button plus"
+                disabled={quantity >= 20}
+                className="quantity-button plus rounded-r bg-blue-500 text-white"
               >
                 +
               </button>
