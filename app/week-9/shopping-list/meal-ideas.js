@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 
-// Function to fetch meal ideas from TheMealDB API
+
 const fetchMealIdeas = async (ingredient) => {
   if (!ingredient) return [];
   
@@ -18,13 +18,13 @@ const fetchMealIdeas = async (ingredient) => {
 export default function MealIdeas({ ingredient }) {
   const [meals, setMeals] = useState([]);
 
-  // Function to load meal ideas
+  
   const loadMealIdeas = async () => {
     const mealIdeas = await fetchMealIdeas(ingredient);
     setMeals(mealIdeas);
   };
 
-  // Call loadMealIdeas whenever the ingredient changes
+  
   useEffect(() => {
     loadMealIdeas();
   }, [ingredient]);

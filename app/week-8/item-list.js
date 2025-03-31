@@ -6,7 +6,7 @@ import Item from "./item";
 export default function ItemList({ items, onItemSelect }) {
   const [sortBy, setSortBy] = useState("name");
 
-  // Function to sort items based on the selected sort criteria
+
   const sortedItems = [...items].sort((a, b) => {
     if (sortBy === "name") {
       return a.name.localeCompare(b.name);

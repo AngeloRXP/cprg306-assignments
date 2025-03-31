@@ -14,10 +14,10 @@ export default function Page() {
     try {
       setLoading(true);
       await gitHubSignIn();
-      
-      router.push("/week-9/shopping-list");
+      // Redirect to shopping list page after login
+      router.push("/week-10/shopping-list");
     } catch (error) {
-      console.error("Erro ao fazer login:", error);
+      console.error("Error signing in:", error);
     } finally {
       setLoading(false);
     }
@@ -28,48 +28,48 @@ export default function Page() {
       setLoading(true);
       await firebaseSignOut();
     } catch (error) {
-      console.error("Erro ao fazer logout:", error);
+      console.error("Error signing out:", error);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="container mx-auto p-4 max-w-md">
-      <h1 className="text-2xl font-bold mb-6 text-center">Shopping list App</h1>
+    <div className="container mx-auto p-6 max-w-md">
+      <h1 className="text-3xl font-bold mb-8 text-center">Shopping List App</h1>
       
       {user ? (
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-gray-800 p-6 rounded-lg shadow-md">
           <p className="mb-4">
             Welcome, <span className="font-semibold">{user.displayName}</span> ({user.email})
           </p>
           
           <div className="flex flex-col gap-4">
             <Link 
-              href="/week-9/shopping-list" 
-              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 text-center"
+              href="/week-10/shopping-list" 
+              className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500 text-center"
             >
               Go to Shopping List
             </Link>
             
             <button 
               onClick={handleSignOut} 
-              className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
+              className="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-500"
               disabled={loading}
             >
-              {loading ? "Leaving..." : "Logout"}
+              {loading ? "Signing out..." : "Sign Out"}
             </button>
           </div>
         </div>
       ) : (
-        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <p className="mb-4">Log in to access your shopping list</p>
+        <div className="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+          <p className="mb-4">Sign in to access your shopping list</p>
           <button 
             onClick={handleSignIn} 
-            className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900"
+            className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500"
             disabled={loading}
           >
-            {loading ? "Connecting..." : "Login com GitHub"}
+            {loading ? "Connecting..." : "Sign In with GitHub"}
           </button>
         </div>
       )}

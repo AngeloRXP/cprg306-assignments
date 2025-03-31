@@ -18,7 +18,7 @@ export default function NewItem({ onAddItem }) {
 
     onAddItem(newItem);
 
-    // Reset the form
+   
     setName("");
     setQuantity(1);
     setCategory("produce");
@@ -26,7 +26,7 @@ export default function NewItem({ onAddItem }) {
 
   return (
     <div className="bg-white p-4 rounded-lg shadow">
-      <h2 className="text-xl font-bold mb-4">Add New Item</h2>
+      <h2 className="text-xl font-bold mb-4"></h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">

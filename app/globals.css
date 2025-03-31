@@ -101,21 +101,6 @@ li {
   width: 400px;           
 }
 
-/**
- * Estilos para Week 6 - Shopping List Sort/Group Buttons
- * -----------------------------------------------------
- * 
- * Classes para os botões de ordenação e agrupamento:
- * 
- * .sort-button - Estilo base para todos os botões de ordenação
- * .sort-button.active - Estilo para o botão ativo (laranja mais claro)
- * .sort-button.inactive - Estilo para botões inativos (laranja mais escuro)
- * 
- * Atribuição dos botões:
- * 1. Botão "Name" - Ordena itens por nome
- * 2. Botão "Category" - Ordena itens por categoria
- * 3. Botão "Grouped Category" - Agrupa itens por categoria
- */
 .sort-button {
   padding: 8px 16px;
   margin-right: 8px;
@@ -126,15 +111,13 @@ li {
   transition: background-color 0.2s;
 }
 
-/* Estado ativo - botão laranja claro (f97316) */
 .sort-button.active {
-  background-color: #f97316; /* orange-500 */
+  background-color: #f97316; 
   color: white;
 }
 
-/* Estado inativo - botão laranja escuro (c2410c) */
 .sort-button.inactive {
-  background-color: #c2410c; /* orange-700 */
+  background-color: #c2410c;
   color: white;
 }
 
@@ -142,13 +125,6 @@ li {
   opacity: 0.9;
 }
 
-/**
- * Estilos para o agrupamento por categoria
- * -----------------------------------------------------
- * 
- * .category-group - Container para cada grupo de categoria
- * .category-title - Título de cada categoria na visualização agrupada
- */
 .category-group {
   margin-bottom: 24px;
 }
@@ -158,5 +134,5 @@ li {
   font-weight: bold;
   text-transform: capitalize;
   margin-bottom: 8px;
-  color: #f97316; /* orange-500 */
+  color: #f97316; 
 }

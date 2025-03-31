@@ -18,7 +18,7 @@ export default function NewItem({ onAddItem }) {
 
     onAddItem(newItem);
 
-    // Reset the form
+    
     setName("");
     setQuantity(1);
     setCategory("produce");
